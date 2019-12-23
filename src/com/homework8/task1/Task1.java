@@ -6,7 +6,7 @@ import java.time.Period;
 public class Task1 {
     public static final LocalDate NEW_YEAR = LocalDate.of(2020, 1, 1);
 
-    public static void calculateDays() {
+    public void calculateDays() {
         DaysToNewYear difference = (firstDate, secondDate) -> {
             Period period = Period.between(firstDate, secondDate);
             return period.getDays();
