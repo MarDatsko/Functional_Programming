@@ -29,6 +29,6 @@ public class Task2 {
                 .filter(user -> user.getLoginDate().equals(NOW_DATE.minusDays(7)))
                 .collect(Collectors.groupingBy(User::getTeam, Collectors.mapping(User::getEmail, Collectors.toList())));
 
-        System.out.println(arr);
+        System.out.println("\n" + arr);
     }
 }
