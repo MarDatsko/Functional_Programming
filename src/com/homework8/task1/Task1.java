@@ -7,11 +7,11 @@ public class Task1 {
     public static final LocalDate NEW_YEAR = LocalDate.of(2020, 1, 1);
 
     public void calculateDays() {
-        DaysToNewYear difference = (firstDate, secondDate) -> {
+        CalculateDaysToNewYear daysToNewYear = (firstDate, secondDate) -> {
             Period period = Period.between(firstDate, secondDate);
             return period.getDays();
         };
-        Integer days = difference.getDaysToNewYear(LocalDate.now(), NEW_YEAR);
+        Integer days = daysToNewYear.getDaysToNewYear(LocalDate.now(), NEW_YEAR);
         System.out.println("Days to New Year - " + days);
     }
 }

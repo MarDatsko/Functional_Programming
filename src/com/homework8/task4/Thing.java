@@ -1,16 +1,16 @@
 package com.homework8.task4;
 
 public class Thing {
-    private String nameThing;
+    private String thingName;
     private Boolean isFragile;
 
-    public Thing(String nameThing, Boolean isFragile) {
-        this.nameThing = nameThing;
+    public Thing(String thingName, Boolean isFragile) {
+        this.thingName = thingName;
         this.isFragile = isFragile;
     }
 
     public String getNameThing() {
-        return nameThing;
+        return thingName;
     }
 
     public Boolean getFragile() {
@@ -19,6 +19,6 @@ public class Thing {
 
     @Override
     public String toString() {
-        return nameThing.toString();
+        return thingName.toString();
     }
 }

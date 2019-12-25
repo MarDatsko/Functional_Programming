@@ -30,10 +30,14 @@ public class Task3 {
         newFilm.add(new Film("romance", 24));
     }
 
-    public void findAveragePriceByGenre() {
-        List<Film> allFilm = Stream.concat(oldFilm.stream(), newFilm.stream()).collect(Collectors.toList());
-        Map<String, List<Film>> groupByGenre = allFilm.stream()
+    private Map<String,List<Film>> groupingByGenre() {
+        return Stream.concat(oldFilm.stream(), newFilm.stream()).collect(Collectors.toList())
+                .stream()
                 .collect(Collectors.groupingBy(Film::getGenre));
+    }
+
+    public void printAveragePriceByGenre(){
+        Map<String,List<Film>> groupByGenre = groupingByGenre();
         groupByGenre.forEach((key, value) -> {
             System.out.print("\nFilms genre: " + key + " Average price= ");
             System.out.println(value.stream()

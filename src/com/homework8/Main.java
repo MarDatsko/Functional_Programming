@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         new Task1().calculateDays();
         new Task2().filterUsers();
-        new Task3().findAveragePriceByGenre();
-        new Task4().addExtraPacking();
+        new Task3().printAveragePriceByGenre();
+        new Task4().printResultExtraPacking();
     }
 }

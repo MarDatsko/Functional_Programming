@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Box {
-    private List<Thing> boxWithThing = new ArrayList<>();
+    private List<Thing> boxWithThings = new ArrayList<>();
 
-    public List<Thing> getBoxWithThing() {
-        return boxWithThing;
+    public List<Thing> getBoxWithThings() {
+        return boxWithThings;
     }
 
-    public void addInBox(Thing thing) {
-        boxWithThing.add(thing);
+    public void addIntoBox(Thing thing) {
+        boxWithThings.add(thing);
     }
 }
